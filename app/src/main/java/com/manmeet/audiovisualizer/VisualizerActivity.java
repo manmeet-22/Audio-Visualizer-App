@@ -17,12 +17,15 @@ package com.manmeet.audiovisualizer;
  */
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.manmeet.audiovisualizer.AudioVisuals.AudioInputReader;
@@ -116,14 +119,20 @@ public class VisualizerActivity extends AppCompatActivity {
         }
     }
 
-    // TODO (1) Create a new Empty Activity named SettingsActivity; make sure to generate the
-    // activity_settings.xml layout file as well and add the activity to the manifest
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.visualizer_menu, menu);
+        return true;
+    }
 
-    // TODO (2) Add a new resource folder called menu and create visualizer_menu.xml
-    // TODO (3) In visualizer_menu.xml create a menu item with a single item. The id should be
-    // "action_settings", title should be saved in strings.xml, the item should never
-    // be shown as an action, and orderInCategory should be 100
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(VisualizerActivity.this, SettingsActivity.class);
+            startActivity(intent);
 
-    // TODO (5) Add the menu to the menu bar
-    // TODO (6) When the "Settings" menu item is pressed, open SettingsActivity
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

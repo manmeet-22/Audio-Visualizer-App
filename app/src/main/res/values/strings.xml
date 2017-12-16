@@ -12,4 +12,5 @@
 
     <!-- Value in SharedPreferences for green color option -->
     <string name="pref_color_green_value" translatable="false">green</string>
+    <string name="settings">Settings</string>
 </resources>

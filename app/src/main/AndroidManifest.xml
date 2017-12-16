@@ -20,6 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:launchMode="singleTop"
+            android:parentActivityName=".VisualizerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.manmeet.audiovisualizer.VisualizerActivity" />
+        </activity>
     </application>
 
 </manifest>
