@@ -7,4 +7,30 @@
         android:summaryOn="@string/pref_show_on"
         android:title="@string/shared_preference_bass_label" />
 
+    <CheckBoxPreference
+        android:defaultValue="@bool/pref_show_treble_default"
+        android:key="@string/shared_preference_treble_key"
+        android:summaryOff="@string/pref_show_off"
+        android:summaryOn="@string/pref_show_on"
+        android:title="@string/shared_preference_treble_label" />
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/pref_show_mid_range_default"
+        android:key="@string/shared_preference_mid_range_key"
+        android:summaryOff="@string/pref_show_off"
+        android:summaryOn="@string/pref_show_on"
+        android:title="@string/shared_preference_mid_range_label" />
+
+    <ListPreference
+        android:defaultValue="@string/pref_color_red_value"
+        android:entries="@array/pref_color_options_labels"
+        android:entryValues="@array/pref_color_option_values"
+        android:key="@string/pref_color_key"
+        android:title="@string/pref_color_label" />
+
+    <EditTextPreference
+        android:defaultValue="@string/pref_size_default"
+        android:key="@string/pref_size_key"
+        android:title="@string/pref_size_label" />
+
 </PreferenceScreen>
